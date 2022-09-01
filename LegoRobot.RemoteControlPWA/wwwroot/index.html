@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Lego Robot Controller</title>
+    <link rel="manifest" href="manifest.json" crossorigin="anonymous">
+    <link rel="stylesheet" href="lib/nouislider/nouislider.min.css" />
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="app.js" type="module"></script>
+
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overscroll-behavior-y: contain;
+        }
+
+        main {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #pageContainer {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #connectionContainer {
+            display: flex;
+            justify-content: left;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        #connectBtn {
+            margin: 1em;
+        }
+
+        #deviceName {
+            margin: 1em;
+            flex-grow: 1;
+            font-family: Verdana, sans-serif;
+            font-size: medium;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #connectionStatus {
+            margin: 1em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #error {
+            margin: 1em;
+            width: 100%;
+            color: red;
+            text-align: center;
+        }
+
+        #slidersContainer {
+            flex-grow: 1;
+            margin-top: 2em;
+            margin-bottom: 2em;
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+        }
+
+        .slider {
+            height: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div id="pageContainer">
+            <div id="connectionContainer">
+                <button id="connectBtn">Connect</button>
+                <div id="deviceName"></div>
+                <div id="connectionStatus"></div>
+            </div>
+            <div id="error"></div>
+            <div id="slidersContainer">
+                <div id="m1s" class="slider"></div>
+                <div id="m2s" class="slider"></div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

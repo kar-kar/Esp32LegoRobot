@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="__vm">
+      <UniqueIdentifier>{eeb46b6a-534a-42ed-8207-3f15073d610c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LegoRobot.Firmware.ino" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.LegoRobot.Firmware.vsarduino.h">
+      <Filter>__vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Projects\NyLights\NyMatrix\Blinker.h" />
+    <ClInclude Include="BLEController.h" />
+    <ClInclude Include="Motor.h" />
+    <ClInclude Include="BLEInt16Characteristic.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Projects\NyLights\NyMatrix\Blinker.cpp" />
+    <ClCompile Include="BLEController.cpp" />
+    <ClCompile Include="Motor.cpp" />
+    <ClCompile Include="BLEInt16Characteristic.cpp" />
+  </ItemGroup>
+</Project>
