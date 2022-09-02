@@ -30,6 +30,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: tsc compile
+        uses: iCrawl/action-tsc@v1
+        with:
+          project: ./LegoRobot.RemoteControlPWA
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
