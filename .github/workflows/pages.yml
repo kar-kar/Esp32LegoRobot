@@ -30,10 +30,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: tsc compile
-        uses: iCrawl/action-tsc@v1
+      - name: Setup .NET Core SDK 6.0
+        uses: actions/setup-dotnet@v2
         with:
-          project: ./LegoRobot.RemoteControlPWA
+          dotnet-version: 6.0
+      - name: Install dependencies
+        run: dotnet restore LegoRobot.RemoteControlPWA
+      - name: Build
+        run: dotnet build LegoRobot.RemoteControlPWA --configuration Release --no-restore 
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
