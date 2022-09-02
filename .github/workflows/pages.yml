@@ -36,7 +36,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
       - name: Install npm dependencies
-      - run: |
+        run: |
           cd LegoRobot.RemoteControlPWA
           npm install
       - name: Setup .NET Core SDK 6.0.x
