@@ -366,4 +366,5 @@ FodyWeavers.xsd
 /LegoRobot.Firmware/__vm
 /nul.d
 *.map
+*.tsbuildinfo
 /LegoRobot.RemoteControlPWA/wwwroot/*.js

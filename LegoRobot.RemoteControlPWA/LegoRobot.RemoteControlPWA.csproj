@@ -10,21 +10,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\tsconfig.tsbuildinfo" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Remove="wwwroot\ServiceWorker.d.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="4.8.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.1.175" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\app.js" />
-    <None Include="wwwroot\app.js.map" />
-    <None Include="wwwroot\BLEClient.js" />
-    <None Include="wwwroot\BLEClient.js.map" />
-    <None Include="wwwroot\index.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

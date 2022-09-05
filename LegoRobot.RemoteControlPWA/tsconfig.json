@@ -1,14 +1,22 @@
 {
-    "compilerOptions": {
-        "target": "ES6",
-        "module": "ES6",
-        "lib": [
-            "ES6", "DOM"
-        ],
-        "strict": true,
-        "sourceMap": true
-    },
-    "exclude": [
-        "node_modules"
-    ]
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "ES6",
+    "lib": [
+      "ES6",
+      "DOM"
+    ],
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "sourceMap": true
+  },
+  "exclude": [
+    "node_modules",
+    "wwwroot/server"
+  ],
+  "references": [
+    { "path": "wwwroot/server" }
+  ]
 }

@@ -1,6 +1,23 @@
 import { BLEClient } from "./BLEClient.js";
 import * as noUiSlider from "./lib/noUiSlider/nouislider.mjs";
 
+export default class Main {
+    constructor() {
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker
+                .register("./ServiceWorker.js",
+                    {
+                        scope: "/",
+                        type: "module"
+                    })
+                .then(function () {
+                    console.log("Service Worker Registered");
+                });
+        }
+    }
+}
+
+new Main();
 let client: BLEClient | null;
 
 $(function () {
