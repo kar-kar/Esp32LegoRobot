@@ -7,7 +7,7 @@ export default class Main {
             navigator.serviceWorker
                 .register("./ServiceWorker.js",
                     {
-                        scope: "/",
+                        scope: window.location.pathname,
                         type: "module"
                     })
                 .then(function () {
